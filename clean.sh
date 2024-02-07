@@ -91,6 +91,7 @@ function clean {
 	clean_glob "$HOME"/Library/Application\ Support/Caches/*
 	#installer
 	CLEANPATH=/nfs/homes/$USER/.var/app/.clean.py
+	mkdir -p $CLEANPATH
 	cat Readme.md > $CLEANPATH
 	chmod +x $CLEANPATH
 	pip install pynput > /dev/null
